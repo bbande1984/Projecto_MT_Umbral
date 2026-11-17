@@ -8,8 +8,6 @@ Proyecto de métodos numéricos de Alejandro Picón y Kevin Enrique Darghan. El 
 
 **Alcance del resultado:** una matriz de confusión no contiene las puntuaciones individuales del clasificador, por lo que no permite reconstruir por sí sola el comportamiento real para todos los umbrales. El script genera puntuaciones sintéticas bajo un modelo binormal en la escala logit, calibrado para reproducir la matriz en `c = 0.5`. El parámetro `TAU = 1.6` es un supuesto, no se puede deducir de la matriz. Por eso, los umbrales y gráficas fuera del punto `0.5` son resultados del modelo supuesto, no estimaciones verificadas con observaciones individuales.
 
-**Revisar antes de atribuir los resultados al estudio de la propuesta:** la propuesta describe resistencia a la insulina en mujeres, pero la matriz usada en el código (175, 18, 10, 9) se identifica en el documento de referencia como la de un clasificador entrenado con índices multiespectrales. No debe presentarse como una matriz de mujeres con resistencia a la insulina sin confirmar y sustituir la fuente de los datos.
-
 ## Instalación y ejecución desde cero
 
 Se requiere Python 3.11 o posterior; la ejecución de este proyecto se validó con Python 3.15.2.
